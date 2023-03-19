@@ -1,0 +1,54 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # start the build if there are Python start with defined names
+        flake8_odd . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: | Air wiggle ; Project submission  https://devmesh.intel.com/
+ for the Learned worth consult digital technology company incoporated in Nigeria, cac no ; BN 3701056
+https://www.github.com/free2ride19/air-wiggler
+
+https://www.github.com/caseg-network/air-wiggler
+
+ Air wiggle aims to be a project management and collaborative payment platform for web3 teams and DAOs. It is available to monitor all varied solutions from multi-wallets and multi-chains and generate real-time financial statements. Meanwhile, we provide a built-in payment system which hopefully optimizes current file management to enable smooth authentication login and resourcefulness.
+We are approved on gitcoin Learned worth wallet 
+https://gitcoin.co/grants/7529/learned-worth-wallet
+
+Free2ride19@gmail.com
+ jaredesenefreeman@gmail.com
+
+https://www.linkedin.com/in/jaredesene-freeman-2091aa1a5
+
+https://carrussal-green-company.business.site
+        pytest
